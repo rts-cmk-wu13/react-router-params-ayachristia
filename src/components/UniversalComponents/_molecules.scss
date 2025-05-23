@@ -1,0 +1,18 @@
+@use "/src/styles/variables" as *;
+.button{
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // margin: 0 auto;
+    width: 95%;
+    height: 44px;
+    background-color: $buttonBackground;
+    border-radius: 25px;
+    color: white;
+}
