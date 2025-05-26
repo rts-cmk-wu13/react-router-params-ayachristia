@@ -10,8 +10,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   plugins: [react()],
   base: '/',
+  appType: 'spa',
   build: {
-    mpa: true,
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
@@ -25,5 +25,8 @@ export default defineConfig({
       }
     }
   },
+  server: {
+    historyApiFallback: true, // Handle routing during development
+  }
 })
 
