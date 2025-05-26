@@ -9,16 +9,16 @@ export default function Footer() {
         <>
         
         <section className="footer">
-            <NavLink to="/dogs"  className="footer__link">
+            <NavLink to="dogs"  className="footer__link">
             <FiHome className="footer__icon"/>
             </NavLink>
-            <NavLink to="/forum"  className="footer__link">
+            <NavLink to="forum"  className="footer__link">
             <IoChatbubbleOutline className="footer__icon"/>
             </NavLink>
-            <NavLink to="/favorites"  className="footer__link">
+            <NavLink to="favorites"  className="footer__link">
             < FaRegHeart className="footer__icon"/>
             </NavLink>
-            <NavLink to="/settings"  className="footer__link">
+            <NavLink to="settings"  className="footer__link">
             <FiUser className="footer__icon"/>
             </NavLink>
         </section>
