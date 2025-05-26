@@ -14,7 +14,7 @@ export default function ProfileHeader({portrait}) {
                 <span className="profileHeader__iconL">
                     <FaLocationDot color="black"/>
                 </span>
-                <select name="location" id="location" class="profileHeader__select">
+                <select name="location" id="location" className="profileHeader__select">
                     <option value="NewYork">New York City</option>
                 </select>
             </section>
