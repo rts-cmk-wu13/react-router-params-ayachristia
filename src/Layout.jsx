@@ -21,6 +21,7 @@ export default function Layout() {
     }else{
         headerContent = <header></header>;
     }
+
     return (
         <>
         <header>
