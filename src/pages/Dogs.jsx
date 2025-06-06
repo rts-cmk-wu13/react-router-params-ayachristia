@@ -40,6 +40,7 @@ export default function Dogs() {
                         breed={dog.breed}
                         location={dog.location}
                         focus={dog.short_description}
+                        describe={dog.long_description}
                         id={dog.id}
                         />
                 

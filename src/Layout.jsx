@@ -18,6 +18,12 @@ export default function Layout() {
         footerContent = <Footer/>;
     }else if(location.pathname.startsWith("/details/")) {
         headerContent = <header></header>;
+    }else if(location.pathname.startsWith("/favorites")) {
+        headerContent = <ProfileHeader 
+        portrait={Portrait}
+        />;
+        footerContent = <Footer/>;
+
     }else{
         headerContent = <header></header>;
     }

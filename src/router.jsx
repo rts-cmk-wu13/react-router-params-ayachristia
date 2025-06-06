@@ -7,6 +7,7 @@ import Layout from "./Layout";
 import Loading from "./components/Loading";
 import { ErrorBoundary } from "./components/Error";
 import NotFound from "./pages/NotFound";
+import Favorites from "./pages/Favorites";
 
 const router = createBrowserRouter([
     {
@@ -21,12 +22,16 @@ const router = createBrowserRouter([
         {
         path: "/dogs",
         element: <Dogs />,
-        loader: getDogs
+        // loader: getDogs
         },
         {
             path: "/details/:id",
             element: < Details/>,
-            loader: getDog
+            // loader: getDog   
+        },
+        {
+            path: "/favorites",
+            element: <Favorites/>
         },
         {
             path: "*",
