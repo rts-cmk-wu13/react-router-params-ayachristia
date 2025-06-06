@@ -1,15 +1,37 @@
-import { useLoaderData } from "react-router";
+// import { useLoaderData, useParams } from "react-router";
 import background from "/assets/background.svg";
 import DetailsHeader from "../components/Details/DetailsHeader";
 import Resume from "../components/Details/Resume";
 import Button from "../components/UniversalComponents/Button";
 
+import { useEffect, useState } from "react";
+
 export default function Details() {
-    const details = useLoaderData();
-    console.log(details);
+    // const details = useLoaderData();
+    // console.log(details);
+
+    const [dogDetails, setDogDetails] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const {id} = useParams()
+    useEffect(()=>{
+        async function fetchData(){
+            try{
+                const url = `/data.json`
+                const response = await fetch(url)
+                const data = await response.json()
+                const details = data.dogs.find((dog)=> dog.id === Number(id))
+                setDogDetails(details)
+            }catch(error){
+                console.log('Problem fetching data:', error)
+            }finally{
+                setIsLoading(false)
+            }
+        }
+        fetchData()
+    },[])
 
 
-    return (
+    return isLoading ? <h1>Loading... </h1> : (
         <>
         <section className="details">
             <section className="details__background">
@@ -17,15 +39,15 @@ export default function Details() {
             </section>
 
             <section className="details__animal">
-                <img src={details.image} alt={details.breed} className="details__animal--img"/>
+                <img src={dogDetails.image} alt={dogDetails.breed} className="details__animal--img"/>
             </section>
 
 
             <section className="details__specs">
             <DetailsHeader
-            breed={details.breed}
-            location={details.location}
-            gender={details.gender}
+            breed={dogDetails.breed}
+            location={dogDetails.location}
+            gender={dogDetails.gender}
             />
             <Resume/>
             <Button

@@ -1,5 +1,14 @@
 # React + Vite
 
+PERSONAL ASSIGMENT NOTES:
+
+-- From Local Api To Mock Api --
+This assignment originally has a local API where I chose to use loaders.
+I had to change it to a Mock API which means that I created a data.json file in the public folder that holds the data to be called, imitating the API calls.
+To see that I know how to and used loaders originally I have kept it in the components but commented out.
+For the Mock API I used the useEffect with try/catch fetches.
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
