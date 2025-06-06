@@ -1,0 +1,41 @@
+@use '/src/styles/variables' as *;
+
+
+.favorites{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: $colorGray1;
+    &__headline{
+        // margin-bottom: 2rem;
+        font-size: $headlineBig;
+    }
+    &__dog{
+
+
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        border: 1px solid rgb(184, 181, 181);
+        border-radius: 15px;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+        width: 70%;
+        
+       
+    }
+    &__dog:hover{
+        width: 71%;
+        border: 1px solid rgb(113, 113, 255);
+
+    }
+    &__description{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp:2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}

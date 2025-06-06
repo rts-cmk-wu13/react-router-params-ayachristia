@@ -5,10 +5,13 @@ import Resume from "../components/Details/Resume";
 import Button from "../components/UniversalComponents/Button";
 
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+
 
 export default function Details() {
     // const details = useLoaderData();
     // console.log(details);
+
 
     const [dogDetails, setDogDetails] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +32,8 @@ export default function Details() {
         }
         fetchData()
     },[])
+
+    // console.log(dogDetails)
 
 
     return isLoading ? <h1>Loading... </h1> : (
